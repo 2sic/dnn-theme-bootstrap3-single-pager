@@ -1,0 +1,22 @@
+@import "variables.scss";
+@import "layout.scss";
+
+
+@media all {
+    body, .Normal, p { font-weight:300; color:$tosic-font-color; font-size:14px; }
+    .Normal, p, li p { line-height:22px;}
+	body h1 { text-transform:$tosic-heading-1-texttransform; font-weight:normal;}
+    body h2 { text-transform:$tosic-heading-2-texttransform; color:$brand-primary; margin-bottom:22px; font-weight:normal;font-size: 26px; font-family:"Times New Roman", Times, serif;}
+    body h3 { text-transform:$tosic-heading-3-texttransform; }
+    body h4 { text-transform:$tosic-heading-4-texttransform; font-family:$font-family-sans-serif; color:#b1aaa6; font-weight:300; font-size:17px;}
+	a {
+		text-decoration: none;
+		&:link, &:visited { color: $link-color; text-decoration: none; }
+		&:hover { color:$link-hover-color; text-decoration: underline; }
+	}
+ 
+	/* Fix List-Items around floatet image - http://stackoverflow.com/a/710264 */
+	.DnnModule ul { overflow: hidden; margin-left:0; }
+	.DnnModule ul li { margin-left:18px; }
+	.DnnModule ul.sc-menu {margin-bottom:0px;} /* damit sc-menu keinen Platz beansprucht */
+}

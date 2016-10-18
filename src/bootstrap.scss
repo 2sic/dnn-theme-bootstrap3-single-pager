@@ -1,0 +1,16 @@
+@import "variables.scss";
+@import "variables-2sic-standard.scss";
+@import "_variables";
+@import "../lib/bootstrap-sass/assets/stylesheets/_bootstrap";
+@import "_bootstrap-override";
+
+
+/*#region DNN Overrides and default styles (do not change) */	
+/* box-sizing Fixes for DNN components, 3dr party plugins, modules */
+#ControlBar_ControlPanel * { box-sizing:content-box; }
+#ControlBar_ControlPanel .mark { background-color: transparent; padding: 0; }
+.actionMenu * { box-sizing:content-box; }
+.dnnCheckbox .mark { padding:0; background:none; }
+.ui-dialog { color:black; font-family:Arial, sans-serif;}
+form .dnn_mact { margin-left:-1px !important;}
+/*#endregion*/ 

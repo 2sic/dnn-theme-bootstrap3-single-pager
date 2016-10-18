@@ -1,0 +1,15 @@
+{
+  "name": "2sic-dnn-theme-bootstrap3-single-pager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/2sic/dnn-theme-bootstrap3-single-pager"
+  },
+  "author": "2sic internet solutions",
+  "license": "MIT"
+}

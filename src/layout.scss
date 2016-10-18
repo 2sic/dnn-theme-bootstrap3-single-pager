@@ -1,0 +1,513 @@
+@import "variables.scss";
+@import "variables-2sic-standard.scss";
+/*@import "../lib/bootstrap/less/mixins.less"; ToDo-2lt: Commented out for testing (06.10.2016)*/
+
+
+/* 2sic custom variables */
+$tosic-body-padding: 0; // Specify padding value for body (most common: top / bottom values)
+$tosic-logo-width: 65px;
+$tosic-font-color: #1e1a1b;
+$tosic-burger-color: $brand-primary; 
+$tosic-heading-1-texttransform: uppercase;
+$tosic-heading-2-texttransform: uppercase;
+$tosic-heading-3-texttransform: uppercase;
+$tosic-heading-4-texttransform: uppercase;
+$tosic-footer-color: #fff;
+$tosic-footer-background: $brand-primary;
+
+/* 2sic Navigation */
+$tosic-menu-margin-top: 20px;
+$tosic-menu-color: $tosic-font-color;
+$tosic-menu-fontfamily: $font-family-sans-serif;
+$tosic-menu-fontsize: 16px;
+$tosic-menu-texttransform: none;
+$tosic-menu-items-margin-left:11px;
+
+/* 2sic Sections */
+$tosic-section-bgcolor-light: white;
+$tosic-section-bgcolor-gray: #d9d9d9;
+$tosic-section-bgcolor-medium: #d9d9d9;
+$tosic-section-bgcolor-dark: #d9d9d9;
+$tosic-section-bgcolor-dark-textcolor: inherit;
+$tosic-section-bgimage-overlay-color: #000000 ;
+$tosic-section-bgimage-overlay-opacity:40;
+
+@media all {
+    
+
+    /*language only for admin visible*/
+    body ul.ly-language {display:none;}
+    .role-admin .ly-language {display:block;}
+    /*#region Layout*/
+    
+	html { -ms-overflow-style: scrollbar; } 
+	
+	
+    .ly-disablescroll {overflow:hidden;}
+    .container-fluid {
+		width:100%;
+        max-width:1080px;
+		text-align:left;
+    }
+    .container-fluid ul {list-style-type: none;margin-left:0;}
+    .container-fluid ul li {background: url(../../images/list-type.png) no-repeat 0px 9px;margin-left:0;padding-left:20px;}
+
+	.co-module-container { padding-top:50px; padding-bottom:50px; }
+
+    .ly-logo {
+		width:$tosic-logo-width;
+		float:left;
+		margin-top:7px;
+        display:block;
+        overflow:hidden;
+    }
+
+    
+
+    /*#endregion*/
+    
+    /*#region Header */
+    #nav {width:100%;display:block;}
+    .ly-nav {
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        height:97px;
+        width: 100%;
+        left:0;
+        border-bottom:18px solid $brand-primary;
+        background:#FFF;
+        .container-fluid { position:relative;}
+    }
+    .role-admin .ly-nav { position:static;}
+
+    ul.ly-language {
+        position:absolute;
+        top:12px;
+        right:19px;
+        li { list-style:none; float:left; margin-left:0px; padding-left:0; background-image:none;
+             a { font-size:12px; color:$brand-primary; padding:0px 5px;
+             }
+            &:first-child a { border-right:solid 1px $brand-primary;}
+             &.active a { font-weight:bold;}
+             a:hover { color:black;}
+        }
+		li.nav-en-us a { padding-right:0px;}
+		
+		display: none;
+		@media (min-width: $screen-md-min) { display:block; }
+    }
+	
+	
+	.sidr ul.ly-language {
+		@media (min-width: $screen-md-min) { display:none; }
+		position: static;
+		display: none;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		margin-top: 30px;
+		float: right;
+	}
+
+    ul.ly-nav-main {
+        float: right;
+        list-style: none;
+		margin: 0;
+		padding: 0px;
+        margin-top: 45px;
+
+		display:none;
+		@media (min-width: $screen-md-min) { display:block; }
+
+        li {
+            float: left;
+			background: transparent;
+			margin: 0;
+			padding: 0;
+
+            a {
+                color: $tosic-menu-color;
+                font-family: $tosic-menu-fontfamily;
+                font-size: $tosic-menu-fontsize;
+                margin-left: $tosic-menu-items-margin-left;
+                text-transform: $tosic-menu-texttransform;
+				display:block;
+				padding:4px 8px 2px 8px;
+
+                
+            }
+            &:last-child a { padding-right:0px;}
+            &.active a { font-weight:bold; }
+            a:hover { color:$brand-primary; text-decoration: none;}
+            
+            
+        }
+    }
+
+    
+	
+	.sidr {
+		ul.ly-nav-main {
+			display: block;
+			@media (min-width: $screen-md-min) { display:none; }
+			
+			float: none;
+			
+			li {
+				float: none;
+			}
+		}
+	}
+    
+    /*#endregion*/
+
+   .ly-disablescroll { overflow:hidden; }
+
+
+   /*#region Mobile Navigation */
+    .ly-nav-mobile-trigger {
+        display:block;
+        margin:15px 10px 0 -10px;
+        padding:10px;
+        outline:none!important;
+        
+        &:after {
+            border-bottom: 3px solid $tosic-burger-color;
+			border-top: 3px solid $tosic-burger-color;
+			text-indent: -9999px;
+			display: block;
+			content: ' ';
+			width: 29px;
+			height: 17px;
+        }
+		&:before {
+			border-bottom: 3px solid $tosic-burger-color;
+			text-indent: -9999px;
+			display: block;
+			content: ' ';
+			width: 29px;
+			height: 10px;
+			position: absolute;
+		}
+
+        @media (min-width: $screen-md-min) { display:none; }
+    }
+	
+	a.ly-close, a.ly-close:link, a.ly-close:visited {color: #666;text-decoration: none;}
+	a.ly-close{
+		display: block;
+		padding: 3px 7px;
+		font-size: 11px;
+		text-align: right;
+	}
+	.ly-close span{
+		color: $brand-primary;
+		margin-left: 2px;
+		font-size: 15px;
+		position: relative;
+		top: 4px;
+	}
+	
+    .sidr-open .ly-nav-mobile-trigger:after, .sidr-open .ly-nav-mobile-trigger:before { border-color:$brand-primary; }
+
+    /* SIDR Off-Canvas Menu Styling */
+    .sidr {
+        display:none;
+        position: absolute;
+        position: fixed;
+        top:0;
+        height:100%;
+        z-index:999999;
+        width:260px;
+        overflow-x:none;
+        overflow-y:auto;
+        background:#F8F8F8;
+        color:#333;
+        box-shadow: inset 0 0 5px 5px #ebebeb;
+
+        .sidr-inner { padding: 15px; overflow: hidden; position: relative; }
+        &.right{ left:auto; right:-260px }
+        &.left{ left:-260px; right:auto }
+    }
+
+    /*#endregion*/
+
+    /*#region Sub Navigation */
+    .ly-nav-sub, .ly-nav-mobile {
+        margin:($grid-gutter-width / 2) 0;
+        font-size:$font-size-base;
+		ul {
+			list-style-type:none;
+		}
+        > li {
+            margin-top:0!important;
+            border-bottom:1px solid #DADADA;
+            > a {
+                padding-left:0;
+                color:darken($brand-primary, 10%);
+                transition: color 0.5s ease;
+            }
+            &.active > a, > a:hover, &.active > a:hover {
+				color:#333333;
+            }
+            &.active { border-color:$brand-primary; }
+            > ul { 
+                margin:0;
+                padding:0 0 8px 0;
+                > li, > li li {
+                    margin:0;
+                    > a {
+                        color:#ABABAB;
+                        display:block;
+                        padding:4px 10px 4px 20px;
+                        font-size:0.85em;
+                        text-decoration:none;
+                    }
+                    &.active > a, > a:hover { color:$brand-primary; }
+                }
+            }
+        }
+    }
+    .ly-nav-mobile { font-size:$font-size-base * 1.2; margin-top:0; }
+
+    /*#endregion*/
+
+
+    /*#region Sub Navigation */
+    #nav-main-offcanvas ul.ly-nav-main {
+        margin: ceil($grid-gutter-width / 2) 0;
+        font-size: ceil($font-size-base * 1.2);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-top: 0 !important;
+            border-bottom: 1px solid #ebebeb;
+            padding: 10px 0;
+
+            > a {
+                padding-left: 0;
+                text-transform: $tosic-menu-texttransform;
+                font-family: $tosic-menu-fontfamily;
+                color: $brand-primary;
+                transition: color 0.5s ease;
+            }
+
+                &.active > a, > a:hover, &.active > a:hover {
+                    text-decoration: none;
+                }
+
+            &.active {
+                border-color: $brand-primary;
+            }
+        }
+    }
+    .ly-nav-mobile { font-size:$font-size-base * 1.2; margin-top:0; }
+
+    /*#endregion*/
+
+    /*#region Sections */
+
+    .ly-section {
+		width: 100%;
+		max-width: 2400px;
+		margin: 0 auto;
+        position: relative;
+
+        &.co-background-light {
+            // No styles needed - white page background
+        }
+
+        &.co-background-dark, &.co-background-img {
+            background-color: $tosic-section-bgcolor-dark;
+
+            .co-section-starter:after {
+                content: url(../../images/seperator-light.png);
+
+                @media (max-width: 1600px) {
+                    content:url(../../images/seperator-light.png?w=57);
+                }
+
+                @media (max-width: $screen-sm) {
+                    content:url(../../images/seperator-light.png?w=38);
+                }
+            }
+
+            h1.co-section-title, h2.co-section-subtitle {
+                color: $tosic-section-bgcolor-dark-textcolor;
+            }
+
+        }
+
+        &.co-background-img, .co-background-img {
+            background-position: center center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+
+            .co-background-overlay {
+                content: " ";
+                display: block;
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: $tosic-section-bgimage-overlay-color;
+                opacity: ($tosic-section-bgimage-overlay-opacity / 100);
+            }
+        }
+    }
+
+	.co-background-img-tall {
+		padding:60px 0;
+		@media (min-width: $screen-md-min) { padding:190px 0; }
+	}
+
+    /*#endregion*/ 
+    
+    /*#region Content */
+    #dnn_ContentPane { padding-top:0;}
+    section .DnnModule:last-child { 
+		padding-bottom:20px;
+		@media (min-width: $screen-md-min) { padding-bottom:60px; }
+	}
+    .co-background-medium {
+        background-color: $tosic-section-bgcolor-medium;
+    }
+    .bg-transparent-primary { 
+        background: fade($brand-primary, 80%); 
+    }
+    .color-primary { color:$brand-primary;}
+    .border-gray { border-color:$tosic-section-bgcolor-gray;}
+    .color-gray { color:$tosic-section-bgcolor-gray;}
+    .color-primary { color:$brand-primary;}
+    .bg-gray, .before-bg-gray:before { background-color:$tosic-section-bgcolor-gray;}
+    .co-cancelpadding-xs {
+        @media (max-width: $screen-xs) { margin:0 -($grid-gutter-width / 2); }
+    }
+
+    .co-rounded { border-radius:100%;}
+    .bg-tsic-gray { background-color:$tosic-section-bgcolor-gray;}
+    .ly-scroll-button {
+        display: block;
+        width: 46px;
+        height: 46px;
+        border-radius: 100%;
+        background-color: $brand-primary;
+        text-align: center;
+        z-index: 100000;
+
+        span {
+            color: white;
+            font-size: 30px;
+            margin-top: 6px;
+        }
+
+        &.scroll-top {
+            position: fixed;
+            bottom: 125px;
+            opacity: 0;
+            right: 125px;
+        }
+
+        @media (max-width: 1100px) {
+            width:35px; height:35px; bottom:94px; right:94px;
+			span {
+                font-size: 23px;
+                margin-top: 5px;
+            }
+			&.scroll-top { bottom:30px; right:30px; }
+        }
+    }
+    
+    .co-section-starter {
+        text-align:center;
+        padding:28px 0 20px 0;
+		@media (min-width: $screen-md-min) {  padding:58px 0 60px 0; }
+        h1.co-section-title {
+            font-size:28px;
+			@media (min-width: $screen-md-min){
+				font-size:43px;
+			}
+            text-transform:uppercase;
+            font-family:$headings-font-family;
+            margin-bottom:0px;
+            line-height:30px;
+        }
+        h2.co-section-subtitle {
+            font-family:$font-family-sans-serif;
+            font-style:italic;
+            text-transform:none;
+            color:#b1aaa6;
+            font-size:20px;
+			@media (min-width: $screen-md-min){
+				font-size:30px;
+			}
+           
+        }
+        &:after {
+            content: " " ;
+            width:170px;
+            height:6px;
+            background-color:$brand-primary;
+            display:block;
+            text-align:center;
+            margin:26px auto 0 auto;
+        }
+    }
+	
+	.ly-blankskin .co-section-starter {
+		padding:0 0 45px 0;
+	}
+
+    
+    /*#endregion*/
+
+    /*#region Footer */
+
+    #Form footer {
+		font-size:14px;
+        text-align:center;
+        background-color:$tosic-footer-background;
+        padding: 8px 0;
+        margin-top:10px;
+        a {color:$tosic-footer-color; padding:5px;}
+    }
+
+    footer .ly-container-inner {text-align:center;}
+    /* Default layout styles */
+    #ToFlexCopyright, #ToFlexCopyright a, #ToFlexCopyright a:link, #ToFlexCopyright a:visited { color:$gray-light; font-size:10px; }
+    a.ly-login, a.ly-login:link, a.ly-login:visited { color:$tosic-footer-background !important; font-size:10px; }
+    a.ly-login:hover { color:$tosic-footer-color !important; }
+    #ControlBar_ControlPanel #ServiceImg { display:none; }
+
+    /*#endregion */ 
+	
+	
+	/* centered columns styles */
+	.row-centered {
+		text-align:center;
+	}
+	.col-centered {
+		display:inline-block;
+		float:none;
+		/* reset the text-align */
+		text-align:left;
+		/* inline-block space fix */
+		margin-right:-4px;
+	}
+
+	/* For active scroll */
+    .co-menu-active:after { content: " "; height: 1px; width: calc(100% - 11px); position: absolute; background: $tosic-menu-color; right: 0; bottom: 0; opacity: 1; 
+        transition: all .4s ease;
+        -webkit-transition: all .4s ease;
+        -moz-transition: all .4s ease;
+        -o-transition: all .4s ease; }
+}

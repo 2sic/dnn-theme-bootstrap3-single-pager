@@ -1,0 +1,68 @@
+/*
+    This file contains all CSS rules for the DNNCentric Contact Form
+    */
+
+.DnnModule-DNNCentric-MultilanguageForms #tblefmain { text-align: left; }
+
+/* General field styles*/
+.DnnModule-DNNCentric-MultilanguageForms input[type=text],
+.DnnModule-DNNCentric-MultilanguageForms input[type=file],
+.DnnModule-DNNCentric-MultilanguageForms textarea,
+.DnnModule-DNNCentric-MultilanguageForms select { font-size: 13px; color: #46535b !important; width: 100% !important; }
+
+.DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_dtEF'] { width: 100% !important; max-width: 600px; }
+.DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_dtEF'] > tbody > tr > td { padding-bottom: 10px; padding-right: 10px; }
+.DnnModule-DNNCentric-MultilanguageForms input[type='text'],
+.DnnModule-DNNCentric-MultilanguageForms input[type='file'],
+.DnnModule-DNNCentric-MultilanguageForms textarea { background: #F2F3F4; border: 0px solid; resize: none; padding: 5px; }
+.DnnModule-DNNCentric-MultilanguageForms textarea { display: block; }
+.DnnModule-DNNCentric-MultilanguageForms select { background: #F2F3F4; border: 0; padding: 5px; }
+
+.DnnModule-DNNCentric-MultilanguageForms [id$='_dcc_rdl_RadiobuttonList'] input,
+.DnnModule-DNNCentric-MultilanguageForms [id$='_dcc_chklst_CheckboxListVertical'] input { float: left; }
+.DnnModule-DNNCentric-MultilanguageForms [id$='_dcc_rdl_RadiobuttonList'] label,
+.DnnModule-DNNCentric-MultilanguageForms [id$='_dcc_chklst_CheckboxListVertical'] label { display: block; line-height: 1.3em; margin-left: 19px; margin-bottom: 2px; }
+
+.DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_dtEF'] > tbody > tr > td.DCC_EF_FieldCaptionStyle { padding: 4px 20px 0 0 !important; vertical-align:top; }
+td.DCC_EF_FieldCaptionStyle, .DCC_EF_FieldCaptionStyle label { color: inherit!important;font: inherit!important; font-weight: normal; }
+
+.DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_tcSubmit'] .CommandButton,
+.DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_tcSubmit'] .btnSubmit { background: #961B23;padding: 7px 14px;color: #ffffff; margin-top:5px; display:inline-block; border-radius:0px; }
+.DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_tcSubmit'] .CommandButton:hover,
+.DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_tcSubmit'] .btnSubmit:hover { background: #961B23; color: #ffffff; }
+
+.DnnModule-DNNCentric-MultilanguageForms .MyCategory { padding-top: 20px; }
+
+.DnnModule-DNNCentric-MultilanguageForms img[src="/DesktopModules/DNNCentric-MultilanguageForms/Images/Alert.png"] {
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    -o-filter: grayscale(1);
+}
+
+.tdErrorMsg, .EML_FieldError, .tableErrorMsg {
+    border:  none;
+    background: transparent;
+    color:  inherit;
+    padding: 0;
+}
+
+.tdErrorMsg ul, .tdErrorMsg ul li {
+    padding:  0!important;
+    margin:  0!important;
+    list-style: none;
+    color: inherit!important;
+    font: inherit!important;
+    font-weight: normal;
+}
+
+.tableErrorMsg {float: left;margin:  25px 0 15px 0;}
+
+/* Screen width: 767 and below */
+@media screen and (max-width: 767px) {
+
+    .DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_dtEF'] { max-width: 400px;table-layout: fixed; }
+    .DnnModule-DNNCentric-MultilanguageForms [id$='_ViewEmailForm_dtEF'] > tbody > tr > td { display: block;width: auto!important; }
+
+}
