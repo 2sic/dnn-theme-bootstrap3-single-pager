@@ -3,7 +3,6 @@
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.DDRMenu.TemplateEngine" Assembly="DotNetNuke.Web.DDRMenu" %>
 <%@ Register TagPrefix="dnn" TagName="MENU" src="~/DesktopModules/DDRMenu/Menu.ascx" %>
 <%@ Register TagPrefix="dnn" Namespace="DotNetNuke.Web.Client.ClientResourceManagement" Assembly="DotNetNuke.Web.Client" %>
-<%@ Register TagPrefix="ToFlex" TagName="Copyright" Src="~/DesktopModules/2flexCopyright/2flexCopyright.ascx" %>
 <%@ Register tagPrefix="ToSic" tagName="LanguageNavigation" src="controls/LanguageNavigation.ascx" %>
 
 <!-- GOOGLE UNIVERSAL ANALYTICS TRACKING -->
