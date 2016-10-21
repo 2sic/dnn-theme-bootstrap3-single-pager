@@ -1,6 +1,5 @@
 @import "variables.scss";
 @import "variables-2sic-standard.scss";
-/*@import "../lib/bootstrap/less/mixins.less"; ToDo-2lt: Commented out for testing (06.10.2016)*/
 
 
 /* 2sic custom variables */
@@ -50,7 +49,7 @@ $tosic-section-bgimage-overlay-opacity:40;
 		text-align:left;
     }
     .container-fluid ul {list-style-type: none;margin-left:0;}
-    .container-fluid ul li {background: url(../../images/list-type.png) no-repeat 0px 9px;margin-left:0;padding-left:20px;}
+    .container-fluid ul li {margin-left:0;padding-left:20px;}
 
 	.co-module-container { padding-top:50px; padding-bottom:50px; }
 

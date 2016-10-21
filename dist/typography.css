@@ -1,4 +1,3 @@
-/*@import "../lib/bootstrap/less/mixins.less"; ToDo-2lt: Commented out for testing (06.10.2016)*/
 /* 2sic custom variables */
 /* 2sic Navigation */
 /* 2sic Sections */
@@ -21,7 +20,6 @@
     list-style-type: none;
     margin-left: 0; }
   .container-fluid ul li {
-    background: url(../../images/list-type.png) no-repeat 0px 9px;
     margin-left: 0;
     padding-left: 20px; }
   .co-module-container {
