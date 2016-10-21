@@ -62,15 +62,15 @@
 
 <!-- include files in head -->
 <dnn:DnnCssInclude runat="server" FilePath="dist/bootstrap.css" Priority="100" PathNameAlias="SkinPath" />
-<dnn:DnnCssInclude runat="server" FilePath="lib/fancybox/jquery.fancybox.css" Priority="110" PathNameAlias="SkinPath" />
+<dnn:DnnCssInclude runat="server" FilePath="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" Priority="110" />
 <dnn:DnnCssInclude runat="server" FilePath="dist/typography.css" Priority="120" PathNameAlias="SkinPath" />
 <dnn:DnnCssInclude runat="server" FilePath="dist/layout.css" Priority="130" PathNameAlias="SkinPath" />
 <dnn:DnnCssInclude runat="server" FilePath="dist/contactform.css" Priority="150" PathNameAlias="SkinPath" />
 <dnn:DnnJsInclude runat="server" FilePath="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js" ForceProvider="DnnFormBottomProvider" Priority="100" PathNameAlias="SkinPath" />
 <dnn:DnnJsInclude runat="server" FilePath="bower_components/sidr/dist/jquery.sidr.min.js" ForceProvider="DnnFormBottomProvider" Priority="110" PathNameAlias="SkinPath" />
-<dnn:DnnJsInclude runat="server" FilePath="lib/fancybox/jquery.fancybox.pack.js" ForceProvider="DnnFormBottomProvider" Priority="120" PathNameAlias="SkinPath" />
+<dnn:DnnJsInclude runat="server" FilePath="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js" ForceProvider="DnnFormBottomProvider" Priority="140" />
 <dnn:DnnJsInclude runat="server" FilePath="js/jquery.onePageNav.js" ForceProvider="DnnFormBottomProvider" Priority="130" PathNameAlias="SkinPath" />
-<dnn:DnnJsInclude runat="server" FilePath="js/scripts.js" ForceProvider="DnnFormBottomProvider" Priority="140" PathNameAlias="SkinPath" />
+<dnn:DnnJsInclude runat="server" FilePath="js/scripts.js" ForceProvider="DnnFormBottomProvider" Priority="150" PathNameAlias="SkinPath" />
 
 <script runat="server">
 	protected override void OnPreRender(EventArgs e)
