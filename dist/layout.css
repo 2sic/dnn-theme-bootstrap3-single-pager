@@ -180,7 +180,6 @@
     border-color: #0088F4; }
   /* SIDR Off-Canvas Menu Styling */
   .sidr {
-    display: none;
     position: absolute;
     position: fixed;
     top: 0;
