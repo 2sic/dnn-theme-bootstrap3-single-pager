@@ -17,12 +17,12 @@
 					<img class="ly-logo" alt="skin-OnePager" src="<%=SkinPath%>images/logo.png" />
 					<![endif]-->
 				</a>
-                <div id="NavPane" runat="server" containertype="G" containername="skin-OnePager" containersrc="default.ascx"></div>
+                <div id="NavPane" runat="server" containertype="G" containername="dnn-theme-bootstrap3-single-pager" containersrc="default.ascx"></div>
 			</div>
 		</div>
     </nav>
 	<div>
-		<section id="ContentPane" class="ly-section" runat="server" containertype="G" containername="skin-OnePager" containersrc="default.ascx"></section>
+		<section id="ContentPane" class="ly-section" runat="server" containertype="G" containername="dnn-theme-bootstrap3-single-pager" containersrc="default.ascx"></section>
 	</div>
     <a class="ly-scroll-button scroll-top co-hash-link" href="#Top" title="Nach oben">
         <span class="glyphicon glyphicon-menu-up"></span>
